@@ -132,9 +132,8 @@ export default class FloatingLabel extends Component {
         onEndEditing: this.updateText,
         onFocus: this._onFocus,
         onSubmitEditing: this.props.onSubmitEditing,
-        password: this.props.secureTextEntry || this.props.password, // Compatibility
         placeholder: this.props.placeholder,
-        secureTextEntry: this.props.secureTextEntry || this.props.password, // Compatibility
+        secureTextEntry: this.props.secureTextEntry,
         returnKeyType: this.props.returnKeyType,
         selectTextOnFocus: this.props.selectTextOnFocus,
         selectionState: this.props.selectionState,
