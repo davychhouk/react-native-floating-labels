@@ -165,7 +165,7 @@ export default class FloatingLabel extends Component {
 
 var labelStyleObj = {
   marginTop: 21,
-  paddingLeft: 9,
+//   paddingLeft: 9,
   color: "#AAA",
   position: "absolute"
 };
@@ -179,7 +179,7 @@ var styles = StyleSheet.create({
     position: "relative"
   },
   input: {
-    height: 40,
+    height: 30,
     // borderColor: "gray",
     // backgroundColor: "transparent",
     // justifyContent: "center",
