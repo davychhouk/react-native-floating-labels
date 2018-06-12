@@ -189,7 +189,10 @@ var styles = StyleSheet.create({
     // borderRadius: 4,
     // paddingLeft: 10,
     marginTop: 20,
-    paddingBottom: 5
+    paddingBottom: 2,
+    paddingLeft: 0,
+    paddingTop: 0,
+    paddingRight: 0
   },
   label: labelStyleObj
 });
