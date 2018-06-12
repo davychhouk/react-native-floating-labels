@@ -188,7 +188,8 @@ var styles = StyleSheet.create({
     // fontSize: 20,
     // borderRadius: 4,
     // paddingLeft: 10,
-    marginTop: 20
+    marginTop: 20,
+    paddingBottom: 5
   },
   label: labelStyleObj
 });
