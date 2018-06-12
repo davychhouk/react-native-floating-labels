@@ -157,7 +157,7 @@ export default class FloatingLabel extends Component {
     return (
       <View style={elementStyles}>
         {this._renderLabel()}
-        <TextInput {...props} ref={this.props.inputRef} />
+        <TextInput {...props} ref={this.props.inputRef} underlineColorAndroid='transparent' />
       </View>
     );
   }
