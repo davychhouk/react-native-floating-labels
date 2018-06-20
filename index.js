@@ -124,6 +124,7 @@ export default class FloatingLabel extends Component {
         editable: this.props.editable,
         enablesReturnKeyAutomatically: this.props.enablesReturnKeyAutomatically,
         keyboardType: this.props.keyboardType,
+        maxLength: this.props.maxLength,
         multiline: this.props.multiline,
         numberOfLines: this.props.numberOfLines,
         onBlur: this._onBlur,
