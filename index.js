@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
-
 import {
   StyleSheet,
   TextInput,
@@ -12,6 +10,8 @@ import {
   Platform,
   ViewPropTypes
 } from "react-native";
+import PropTypes from "prop-types";
+import { moderateScale } from 'react-native-size-matters';
 
 var textPropTypes = Text.propTypes || ViewPropTypes;
 var textInputPropTypes = TextInput.propTypes || textPropTypes;
@@ -31,7 +31,7 @@ export default class FloatingLabel extends Component {
 
     const dirty = props.value || props.placeholder;
     const style = dirty ? dirtyStyle : cleanStyle;
-    
+
     this.state = {
       text: props.value,
       dirty: dirty,
@@ -158,17 +158,18 @@ export default class FloatingLabel extends Component {
     return (
       <View style={elementStyles}>
         {this._renderLabel()}
-        <TextInput {...props} ref={this.props.inputRef} underlineColorAndroid='transparent' />
+        <TextInput {...props}  ref={this.props.inputRef} underlineColorAndroid='transparent' />
       </View>
     );
   }
 };
 
 var labelStyleObj = {
-  marginTop: 21,
+  marginTop: moderateScale(21, 0.4),
 //   paddingLeft: 9,
   color: "#AAA",
-  position: "absolute"
+  position: "absolute",
+  fontSize: moderateScale(16, 0.4)
 };
 
 if (Platform.OS === "web") {
@@ -180,7 +181,7 @@ var styles = StyleSheet.create({
     position: "relative"
   },
   input: {
-    height: 30,
+    height: moderateScale(30, 0.4),
     // borderColor: "gray",
     // backgroundColor: "transparent",
     // justifyContent: "center",
@@ -189,21 +190,22 @@ var styles = StyleSheet.create({
     // fontSize: 20,
     // borderRadius: 4,
     // paddingLeft: 10,
-    marginTop: 20,
-    paddingBottom: 2,
+    marginTop: moderateScale(20, 0.4),
+    paddingBottom: moderateScale(2, 0.4),
     paddingLeft: 0,
     paddingTop: 0,
-    paddingRight: 0
+    paddingRight: 0,
+    fontSize: moderateScale(20, 0.4)
   },
   label: labelStyleObj
 });
 
 var cleanStyle = {
-  fontSize: 16,
-  top: 7
+  fontSize: moderateScale(16, 0.4),
+  top: moderateScale(7, 0.4)
 };
 
 var dirtyStyle = {
-  fontSize: 12,
-  top: -17
+  fontSize: moderateScale(12, 0.4),
+  top: moderateScale(-17, 0.4)
 };
